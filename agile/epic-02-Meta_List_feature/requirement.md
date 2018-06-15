@@ -16,11 +16,11 @@ Later we can search data when needed. (This will be another feature.)
 * there is footer which contains summary about total select, total data numbers. 
 
 ### UI Mock up
-* PC
+![PC]()
 
-* Pad
+![Pad]()
 
-* Smart Phone
+![Smart Phone](/agile/epic-02-Meta_List_feature/pics/ui-smart_phone.PNG)
 
 ## Files
 Basically a data here should be a zip file which may be a folder contains some files or pictures, or a folder or just a file. The files can be related to each other.
