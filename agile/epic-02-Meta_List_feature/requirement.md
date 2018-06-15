@@ -10,17 +10,17 @@ Meta List is used for recording data storage information. Data can be any kind o
 Later we can search data when needed. (This will be another feature.)
 
 ## UI
-* UI must be stand to **General UI Rules<link>**.
+* UI must be stand to [General UI Rules]().
 * There is action bar with buttons: Add, Delete.
-* There is grid.
-* there is footer which contains summary about total select, total data numbers. 
+* There is grid which is stand to [General Grid Behaviors]().
+* There is footer which contains summary about total select and total data numbers. 
 
 ### UI Mock up
 ![PC]()
 
 ![Pad]()
 
-![Smart Phone](/agile/epic-02-Meta_List_feature/pics/ui-smart_phone.PNG)
+![Smart Phone](/agile/epic-02-Meta_List_feature/images/ui-smart_phone.PNG)
 
 ## Files
 Basically a data here should be a zip file which may be a folder contains some files or pictures, or a folder or just a file. The files can be related to each other.
@@ -96,20 +96,29 @@ There will be another epic for **Relate** feuture. Currently it is just informat
   * **Required**: No
 
 ## Requirements
-  1. User can add new meta data.
-    * There is Add button on toolbar. When user clicks it an *Add New Meta* dialog will prompt.
-    * Required fields:
-      Filename
-      File Location
-    * After user clicks save and the data will send to server, server will validate the data.
-      Filename + Location must be unique
+### User can add new meta data
+* There is Add button on action bar. When user clicks it an empty row will append on the end of the grid.
+* Once user mouse focuses on the input field, he can fill out the values.
+* Once user mouse unfocuses from the input field the value will be validated (client side).
+  * If value is invalid then user will be warned and it will not be saved.
+  * If value is valid and all requred fields exist then it will be saved.
+  * If value is valid but lacks any requred field then user will be warned and it will not be saved.
 
-  2. User can edit meta data directly on grid.
+### User can edit meta data
+* User can edit meta data directly on grid.
     * After mouse unfocuses from column the data is saved on server.
     * Validation of field
-	Filename: Check Filename + Location must be unique.
-	Location: Check Filename + Location must be unique.
 	
+
+### User can delete meta data
+
+
+
+
+
+### Note
+* Although filename must be unique in location i.e. file system path but we don't constraint the uniqueness. (I want this system has tolerance for inaccurate information because I want the system simaple. This issue is not a big deal, at least not now.)
+
 
 ---------------------------------------
 **this part is for test desgin**
@@ -121,5 +130,8 @@ This will be a new feature for BAssistant2, a new project which contains technic
  database			SQLite/(maybe also MongoDB? It depends on if it is available for Cygwin and Termux)
  client side			Angular.js + Bootstrap
  API				RestAPI
+
+  * If value is valid then the field values will be sent to server.
+  * If value is invalid then user will be warned and the value will not be saved.
 
 
