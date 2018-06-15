@@ -16,9 +16,15 @@ Later we can search data when needed. (This will be another feature.)
 * There is footer which contains summary about total select and total data numbers. 
 
 ### UI Mock up
+* PC
+
 ![PC]()
 
+* Pad
+
 ![Pad]()
+
+* Smart Phone
 
 ![Smart Phone](/agile/epic-02-Meta_List_feature/images/ui-smart_phone.PNG)
 
@@ -99,39 +105,35 @@ There will be another epic for **Relate** feuture. Currently it is just informat
 ### User can add new meta data
 * There is Add button on action bar. When user clicks it an empty row will append on the end of the grid.
 * Once user mouse focuses on the input field, he can fill out the values.
-* Once user mouse unfocuses from the input field the value will be validated (client side).
-  * If value is invalid then user will be warned and it will not be saved.
+* Once user mouse unfocuses from the input field the value will be validated.
+  * If value is invalid then user will be warned and value will not be saved.
   * If value is valid and all requred fields exist then it will be saved.
-  * If value is valid but lacks any requred field then user will be warned and it will not be saved.
+  * If value is valid but lacks any requred field then user will be warned and value will not be saved.
 
 ### User can edit meta data
 * User can edit meta data directly on grid.
-    * After mouse unfocuses from column the data is saved on server.
-    * Validation of field
-	
+* Once user mouse focuses on the input field, he can edit the values.
+* Once user mouse unfocuses from the input field the value will be validated.
+  * If value is invalid then user will be warned and value will not be saved.
+  * If value is valid and all requred fields exist then it will be saved.
+  * If value is valid but lacks any requred field then user will be warned and value will not be saved.
 
 ### User can delete meta data
-
-
-
-
+* There is Delete button on action bar, by click the selected row(s) will be deleted.
+* If no row is selected, this button is disabled (grayed out).
+* User can delete more than one row.
+* After user click Delete button there is prompt notifing user the row will be deleted.
+  * The warning message should contain the number of user selected rows.
+  * The warning message is **(number of selected rows) record(s) will be deleted. Are you sure?**.
+  * The confirm button content is **Yes, delete**.
+  * The cancel button content is **No, dont' delete**.
+* Once user clicks confirm button, the row(s) should be deleted.
+  * If there is any error of deletion, prompts error message to user.
+* Once user clicks cancel button, the row(s) should not be deleted.
 
 ### Note
 * Although filename must be unique in location i.e. file system path but we don't constraint the uniqueness. (I want this system has tolerance for inaccurate information because I want the system simaple. This issue is not a big deal, at least not now.)
-
-
----------------------------------------
-**this part is for test desgin**
-This will be a new feature for BAssistant2, a new project which contains technics:
- developent principle		TDD
- developent control		agile
- OS				LINUX like
- server side			Node.js
- database			SQLite/(maybe also MongoDB? It depends on if it is available for Cygwin and Termux)
- client side			Angular.js + Bootstrap
- API				RestAPI
-
-  * If value is valid then the field values will be sent to server.
-  * If value is invalid then user will be warned and the value will not be saved.
-
+* Both client and server sides need to valid the field values.
+  * If validation failed by client side, the values will not send to server.
+  * If validation failed by server side, server need return the error with reason.
 
