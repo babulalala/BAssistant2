@@ -1,14 +1,31 @@
-# Design Document
-This will be a new feature for BAssistant2, a new project which contains technics:
- developent principle		TDD
- developent control		agile
- OS				LINUX like
- server side			Node.js
- database			SQLite/(maybe also MongoDB? It depends on if it is available for Cygwin and Termux)
- client side			Angular.js + Bootstrap
- API				RestAPI
+# Meta List Design Document
 
-  * If value is valid then the field values will be sent to server.
-  * If value is invalid then user will be warned and the value will not be saved.
+## Development Technologies
+The following technologies will be used during the development.
+* Software development process
+  * TDD
+* Software development management
+  * Agile 
+* Opration System
+  * CentOS 6.x
+  * Termux
+  * Windows 7, 10 with Cygwin
+* Server side
+  * Node.js
+* Database
+  * MongoDB
+* Client side
+  * Angular.js v1
+  * Bootstrap
+* API
+  * RestAPI
 
-bla bla bla....
+## Design
+### US-201806200007 Meta data can be displayed on grid
+
+
+
+
+
+
+## .....

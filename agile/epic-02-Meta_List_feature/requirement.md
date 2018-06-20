@@ -9,6 +9,25 @@ Meta List is used for recording data storage information. Data can be any kind o
 
 Later we can search data when needed. (This will be another feature.)
 
+## User Story Outline
+* [US-201806200007 Meta data can be displayed on grid](https://github.com/babulalala/BAssistant2/blob/master/agile/epic-02-Meta_List_feature/requirement.md#user-can-add-new-meta-data)
+
+* [US-201806200007 Meta data can be displayed on grid](requirement.md#user-can-add-new-meta-data)
+
+* [US-201806200007 Meta data can be displayed on grid](#user-can-add-new-meta-data)
+
+
+[US1](link to us section...)
+
+* US1
+[US1]()
+
+* US1
+[US1]()
+
+* US1
+[US1]()
+
 ## UI
 * UI must be stand to [General UI Rules]().
 * There is action bar with buttons: Add, Delete.
@@ -102,7 +121,15 @@ There will be another epic for **Relate** feuture. Currently it is just informat
   * **Required**: No
 
 ## Requirements
+### Meta data can be displayed on grid
+* **US-201806200007**
+* There is a grid with all fields as columns.
+* Currently we don't add any feature like sort, search etc. for columns.
+* There is check box including select all for rows. This column is always at the beginning of row.
+* All meta data will be listed in grid ordered by **Data Name** by default.
+
 ### User can add new meta data
+* **US-201806200008**
 * There is Add button on action bar. When user clicks it an empty row will append on the end of the grid.
 * Once user mouse focuses on the input field, he can fill out the values.
 * Once user mouse unfocuses from the input field the value will be validated.
